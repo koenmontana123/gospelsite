@@ -1,0 +1,63 @@
+/* about-contact.css - About & Contact page styles */
+body {
+  font-family: Georgia, serif;
+  background: #f0fdf4; /* soft green */
+  color: #1f2937;
+  margin: 0;
+  padding: 24px;
+}
+
+header {
+  background: #bbf7d0;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 8px;
+  padding: 6px 12px;
+  background: #34d399;
+  color: #064e3b;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background: #10b981;
+  color: #ffffff;
+}
+
+section {
+  margin: 20px 0;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #d1fae5;
+  border-radius: 8px;
+}
+
+form {
+  margin-top: 16px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+}
+
+button {
+  background: #059669;
+  color: #ffffff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #047857;
+}

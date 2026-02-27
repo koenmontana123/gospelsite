@@ -1,0 +1,164 @@
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Futuristic Background */
+body {
+  background: radial-gradient(circle at center, #0f0f1a, #000000);
+  font-family: 'Orbitron', sans-serif;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 20px;
+  position: relative;
+}
+
+/* Neon Grid Layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(#00fff7 1px, transparent 1px),
+              linear-gradient(90deg, #ff00ff 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridPulse 4s infinite alternate;
+  z-index: -2;
+  opacity: 0.15;
+}
+
+@keyframes gridPulse {
+  0% { filter: hue-rotate(0deg) brightness(0.8); }
+  100% { filter: hue-rotate(180deg) brightness(1.2); }
+}
+
+/* Starfield Layer */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  animation: starMove 60s linear infinite;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+@keyframes starMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+/* Futuristic Navigation Bar */
+.navbar {
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 2px solid #00fff7;
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.3);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #ff00ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #00fff7;
+  left: 0;
+  bottom: -4px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00fff7;
+  animation: linkFlicker 2s infinite alternate;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Neon Flicker Headings */
+@keyframes neonFlicker {
+  0% { text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7; }
+  50% { text-shadow: 0 0 20px #ff00ff, 0 0 40px #00fff7; }
+  100% { text-shadow: 0 0 10px #00fff7, 0 0 20px #ff00ff; }
+}
+
+h1 {
+  color: #00fff7;
+  animation: neonFlicker 3s infinite alternate;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #ff00ff;
+  animation: neonFlicker 3s infinite alternate;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #ff00ff;
+  animation: neonFlicker 3s infinite alternate;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #00fff7;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.3);
+  transition: transform 0.4s ease;
+  animation: neonBorder 3s infinite alternate;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+@keyframes neonBorder {
+  0% { border-color: #00fff7; }
+  50% { border-color: #ff00ff; }
+  100% { border-color: #00fff7; }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 5px 0;
+  color: #e0e0e0;
+}
+
+/* Audio Player Styling */
+@keyframes audioPulse {
+  0%   { box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7; }
+  25%  { box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff; }
+}
